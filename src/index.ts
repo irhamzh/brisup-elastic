@@ -1,8 +1,8 @@
-import Elasticstore from "./elasticstore"
+import Elasticstore from "./elasticstore";
 
 async function main() {
-  const elasticstore = new Elasticstore()
-  elasticstore.init()
+  const elasticstore = new Elasticstore();
+  elasticstore.init();
 }
 
-main()
+main();
