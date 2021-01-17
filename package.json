@@ -17,7 +17,7 @@
     "build": "tsc",
     "test": "jest --verbose",
     "develop": "tsc --watch",
-    "start": "npm run build &&  node ."
+    "start": "node ."
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.8.0",
