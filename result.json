@@ -1,0 +1,191 @@
+{
+  "took": 2,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 4,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": [
+      {
+        "_index": "bri_corpu_fa_payments",
+        "_type": "_doc",
+        "_id": "AFZzTnFwdasP5t6ouBmv",
+        "_score": null,
+        "_source": {
+          "status": "Belum Berjalan",
+          "namaPembayaran": "adaa",
+          "updatedAt": "2021-01-19T03:55:13.973Z",
+          "approvalLog": [
+            {
+              "role": "Admin",
+              "date": "2021-01-19T03:55:13.670Z",
+              "name": "Ammar",
+              "status": "Belum Berjalan",
+              "userId": "6eYIF6R7p9Msyzh5vhWA0vrs7E53"
+            }
+          ],
+          "invoiceBermaterai": true,
+          "lampiran": [
+            "https://firebasestorage.googleapis.com/v0/b/geochat-252415.appspot.com/o/images%2Ffa-payment%2F1611028511475-Screen%20Shot%202020-11-26%20at%2016.52.00.png?alt=media&token=9da5a59f-8ca7-423f-878c-b88c73697f97"
+          ],
+          "tanggal": "2021-01-19T16:00:00.000Z",
+          "biaya": 12121111,
+          "information": "1121",
+          "createdAt": "2021-01-19T03:55:13.973Z",
+          "typePendidikan": "Non Pendidikan",
+          "seksi": "General Affair",
+          "fakturPajak": false,
+          "typePayment": "Tagihan Service Kendaraan",
+          "vehicle": {
+            "id": "FF6EibByntFG7pcviUZp",
+            "updatedAt": "2020-12-01T09:55:59.335Z",
+            "color": "Merah",
+            "platNomor": "u403934",
+            "createdAt": "2020-12-01T06:43:38.697Z",
+            "kmAkhir": 11,
+            "merk": "Honda"
+          },
+          "notaPembukuan": false
+        },
+        "sort": [1611028513973]
+      },
+      {
+        "_index": "bri_corpu_fa_payments",
+        "_type": "_doc",
+        "_id": "Nf1salcDAlAKBX3leSwz",
+        "_score": null,
+        "_source": {
+          "tanggal": "2021-01-20T17:00:00.000Z",
+          "seksi": "General Affair",
+          "fakturPajak": true,
+          "notaPembukuan": true,
+          "information": "Test",
+          "invoiceBermaterai": true,
+          "namaPembayaran": "Test Service",
+          "lampiran": [
+            "https://firebasestorage.googleapis.com/v0/b/geochat-252415.appspot.com/o/images%2Ffa-payment%2F1610943418889-Screenshot%20from%202021-01-12%2017-28-24.png?alt=media&token=1d8d88e5-792a-4d4a-a917-5badb8ddaa3e"
+          ],
+          "createdAt": "2021-01-18T04:17:01.490Z",
+          "typePendidikan": "Non Pendidikan",
+          "typePayment": "Tagihan Service Kendaraan",
+          "vehicle": {
+            "kmAkhir": 11,
+            "platNomor": "u403934",
+            "id": "FF6EibByntFG7pcviUZp",
+            "updatedAt": "2020-12-01T09:55:59.335Z",
+            "color": "Merah",
+            "merk": "Honda",
+            "createdAt": "2020-12-01T06:43:38.697Z"
+          },
+          "approvalLog": [
+            {
+              "name": "Ammar",
+              "role": "Admin",
+              "userId": "6eYIF6R7p9Msyzh5vhWA0vrs7E53",
+              "date": "2021-01-18T04:17:01.189Z",
+              "status": "Belum Berjalan"
+            }
+          ],
+          "status": "Belum Berjalan",
+          "biaya": 400000,
+          "updatedAt": "2021-01-18T04:17:01.490Z"
+        },
+        "sort": [1610943421490]
+      },
+      {
+        "_index": "bri_corpu_fa_payments",
+        "_type": "_doc",
+        "_id": "Yr9CK3sK1T8MJXyf3Lmy",
+        "_score": null,
+        "_source": {
+          "lampiran": [
+            "https://firebasestorage.googleapis.com/v0/b/geochat-252415.appspot.com/o/images%2Ffa-payment%2F1610940504198-Screenshot%20from%202021-01-12%2017-28-24.png?alt=media&token=c71b555c-9c06-48c6-978b-b48969e021b1"
+          ],
+          "status": "Belum Berjalan",
+          "namaPembayaran": "Test Pembayaran",
+          "notaPembukuan": true,
+          "vehicle": {
+            "kmAkhir": 200,
+            "createdAt": "2020-12-01T06:44:00.653Z",
+            "updatedAt": "2020-12-01T09:14:18.974Z",
+            "merk": "Innova",
+            "id": "WYzQM1mb4dn0hw9kAvUy",
+            "platNomor": "238r928",
+            "color": "Silver"
+          },
+          "invoiceBermaterai": true,
+          "createdAt": "2021-01-18T03:28:26.237Z",
+          "information": "Test",
+          "fakturPajak": true,
+          "typePayment": "Tagihan Service Kendaraan",
+          "tanggal": "2021-01-20T17:00:00.000Z",
+          "approvalLog": [
+            {
+              "date": "2021-01-18T03:28:25.991Z",
+              "status": "Belum Berjalan",
+              "name": "Ammar",
+              "userId": "6eYIF6R7p9Msyzh5vhWA0vrs7E53",
+              "role": "Admin"
+            }
+          ],
+          "updatedAt": "2021-01-18T03:28:26.237Z",
+          "seksi": "General Affair",
+          "biaya": 500000,
+          "typePendidikan": "Non Pendidikan"
+        },
+        "sort": [1610940506237]
+      },
+      {
+        "_index": "bri_corpu_fa_payments",
+        "_type": "_doc",
+        "_id": "uJbeNwdI0ERsbCYrtSW4",
+        "_score": null,
+        "_source": {
+          "biaya": 100000,
+          "vehicle": {
+            "createdAt": "2020-12-01T06:43:38.697Z",
+            "updatedAt": "2020-12-01T09:55:59.335Z",
+            "kmAkhir": 11,
+            "id": "FF6EibByntFG7pcviUZp",
+            "merk": "Honda",
+            "platNomor": "u403934",
+            "color": "Merah"
+          },
+          "typePayment": "Tagihan Service Kendaraan",
+          "status": "Belum Berjalan",
+          "lampiran": [
+            "https://firebasestorage.googleapis.com/v0/b/geochat-252415.appspot.com/o/images%2Ffa-payment%2F1610939554601-115202014958.png?alt=media&token=4ce855af-7af5-481d-ba38-3200f366086e"
+          ],
+          "seksi": "General Affair",
+          "fakturPajak": true,
+          "namaPembayaran": "Ammar AAAAA",
+          "notaPembukuan": true,
+          "tanggal": "2021-01-17T17:00:00.000Z",
+          "updatedAt": "2021-01-18T03:12:36.691Z",
+          "approvalLog": [
+            {
+              "status": "Belum Berjalan",
+              "date": "2021-01-18T03:12:36.390Z",
+              "role": "Admin",
+              "name": "Amer Al-Barkawi",
+              "userId": "RH6qfQ3PI7bYROj5j7iLKAvsQlw2"
+            }
+          ],
+          "typePendidikan": "Non Pendidikan",
+          "information": "Ammar",
+          "invoiceBermaterai": true,
+          "createdAt": "2021-01-18T03:12:36.691Z"
+        },
+        "sort": [1610939556691]
+      }
+    ]
+  }
+}

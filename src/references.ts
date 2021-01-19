@@ -48,6 +48,12 @@ const references: Array<Reference> = [
     transform: (data, parent) => firestoreTimeStampToDate(data),
     // include: ["name", "updatedAt", "createdAt"],
   },
+  {
+    collection: "fa_payments",
+    index: "bri_corpu_fa_payments",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+    // include: ["name", "updatedAt", "createdAt"],
+  },
 ];
 
 export default references;

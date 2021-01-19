@@ -27,15 +27,31 @@ GET /bri_corpu_users/_search
 }
 
 
-GET /bri_corpu_users/_search
+GET /bri_corpu_fa_payments/_search
 {
+  "size": 10,
   "from": 0,
-  "size": 100,
   "sort": [
     {
-      "name.keyword": "asc"
+      "createdAt": "desc"
     }
-  ]
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "wildcard": {
+            "seksi": "*general*"
+          }
+        },
+        {
+          "wildcard": {
+            "seksi": "*affair*"
+          }
+        }
+      ]
+    }
+  }
 }
 
 GET /bri_corpu_roles/_search
