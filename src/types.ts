@@ -25,7 +25,7 @@ export interface ElasticSearchOptions {
 }
 
 export interface Reference {
-  collection: string;
+  collection: string | admin.firestore.Query;
   subcollection?: string;
   index: DynamicTypeIndex | string;
   include?: Array<string>;

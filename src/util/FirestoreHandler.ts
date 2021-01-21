@@ -25,7 +25,11 @@ export default class FirestoreCollectionHandler {
     this.reference = reference;
     this.client = client;
 
-    this.ref = admin.firestore().collection(this.reference.collection);
+    if (this.reference.collection instanceof admin.firestore.Query) {
+      this.ref = this.reference.collection;
+    } else {
+      this.ref = admin.firestore().collection(this.reference.collection);
+    }
 
     // Build new root query (add where clauses, etc.)
     if (this.reference.builder) {
@@ -40,7 +44,7 @@ export default class FirestoreCollectionHandler {
 
     if (this.reference.subcollection) {
       // Building a subcollection requires getting documents first
-      this.ref.onSnapshot(this.handleBindingSubcollection);
+      // this.ref.onSnapshot(this.handleBindingSubcollection);
     } else {
       console.log(
         colors.grey(`
@@ -78,48 +82,48 @@ export default class FirestoreCollectionHandler {
     }
   };
 
-  private handleBindingSubcollection = async (
-    snap: admin.firestore.QuerySnapshot
-  ) => {
-    for (const change of snap.docChanges()) {
-      const changeType: FirebaseDocChangeType = change.type;
-      if (changeType === "added") {
-        let subref = admin
-          .firestore()
-          .collection(
-            `${this.reference.collection}/${change.doc.id}/${this.reference.subcollection}`
-          );
+  // private handleBindingSubcollection = async (
+  //   snap: admin.firestore.QuerySnapshot
+  // ) => {
+  //   for (const change of snap.docChanges()) {
+  //     const changeType: FirebaseDocChangeType = change.type;
+  //     if (changeType === "added") {
+  //       let subref = admin
+  //         .firestore()
+  //         .collection(
+  //           `${this.reference.collection}/${change.doc.id}/${this.reference.subcollection}`
+  //         );
 
-        // Build a subquery for each subcollection reference
-        if (this.reference.subBuilder) {
-          subref = this.reference.subBuilder.call(this, subref);
-        }
+  //       // Build a subquery for each subcollection reference
+  //       if (this.reference.subBuilder) {
+  //         subref = this.reference.subBuilder.call(this, subref);
+  //       }
 
-        console.log(
-          colors.grey(`
-        Begin listening to changes for collection: ${this.reference.collection}
-          documentId: ${change.doc.id}
-          subcollection: ${this.reference.subcollection}
-          include: [ ${
-            this.reference.include ? this.reference.include.join(", ") : ""
-          } ]
-          exclude: [ ${
-            this.reference.exclude ? this.reference.exclude.join(", ") : ""
-          } ]
-        `)
-        );
+  //       console.log(
+  //         colors.grey(`
+  //       Begin listening to changes for collection: ${this.reference.collection}
+  //         documentId: ${change.doc.id}
+  //         subcollection: ${this.reference.subcollection}
+  //         include: [ ${
+  //           this.reference.include ? this.reference.include.join(", ") : ""
+  //         } ]
+  //         exclude: [ ${
+  //           this.reference.exclude ? this.reference.exclude.join(", ") : ""
+  //         } ]
+  //       `)
+  //       );
 
-        // Keep track of listeners as the parent document could be removed and leave us with a dangling listener
-        this.listeners[change.doc.id] = subref.onSnapshot(
-          this.handleSnapshot(change.doc)
-        );
-      } else if (changeType === "removed") {
-        if (this.listeners[change.doc.id]) {
-          this.listeners[change.doc.id].call();
-        }
-      }
-    }
-  };
+  //       // Keep track of listeners as the parent document could be removed and leave us with a dangling listener
+  //       this.listeners[change.doc.id] = subref.onSnapshot(
+  //         this.handleSnapshot(change.doc)
+  //       );
+  //     } else if (changeType === "removed") {
+  //       if (this.listeners[change.doc.id]) {
+  //         this.listeners[change.doc.id].call();
+  //       }
+  //     }
+  //   }
+  // };
 
   private handleSnapshot = (parentSnap?: admin.firestore.DocumentSnapshot) => {
     return async (snap: admin.firestore.QuerySnapshot) => {
