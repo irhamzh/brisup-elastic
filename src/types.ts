@@ -35,6 +35,7 @@ export interface Reference {
       type: ElasticSearchFieldType;
       format?: string;
       dynamic?: boolean;
+      fields?: any;
     };
   };
   builder?: (ref: CollectionReference) => admin.firestore.Query;

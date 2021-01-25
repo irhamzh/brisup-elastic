@@ -69,7 +69,7 @@ export default class FirestoreCollectionHandler {
         await this.client.indices.putMapping({
           index,
           body: {
-            dynamic: false,
+            // dynamic: false,
             properties: this.reference.mappings,
           },
         });
@@ -202,6 +202,7 @@ export default class FirestoreCollectionHandler {
         `Error in \`FS_ADDED\` handler [doc@${doc.id}]: ${e.message}`
       );
       console.error(e);
+      console.error("--------->", e?.meta?.body);
     }
   };
 

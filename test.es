@@ -1,30 +1,31 @@
-GET /bri_corpu_users/_search
-{
-  "from": 0,
-  "size": 10,
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "terms": {
-            "division.keyword": [
-              "All"
-            ]
-          }
-        }
-        // {
-        //   "wildcard": {
-        //     "name": "*Am*"
-        //   }
-        // },{
-        //   "wildcard": {
-        //     "email": "*sss*"
-        //   }
-        // }
-      ]
-    }
-  }
-}
+DELETE /bri_corpu_providers
+
+// {
+//   "from": 0,
+//   "size": 10,
+//   "query": {
+//     "bool": {
+//       "must": [
+//         {
+//           "terms": {
+//             "division.keyword": [
+//               "All"
+//             ]
+//           }
+//         }
+//         // {
+//         //   "wildcard": {
+//         //     "name": "*Am*"
+//         //   }
+//         // },{
+//         //   "wildcard": {
+//         //     "email": "*sss*"
+//         //   }
+//         // }
+//       ]
+//     }
+//   }
+// }
 
 
 GET /bri_corpu_fa_payments/_search
