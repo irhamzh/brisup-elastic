@@ -1,7 +1,7 @@
-GET /bri_corpu_users/_doc/GCAtXZrB8OPtjkulp8VYfAjJE0m1
+GET /bri_corpu_ga_pgspjs/_mapping
 
 {
-  "from": 0,
+  /"from": 0,
   "size": 10,
   "query": {
     "bool": {

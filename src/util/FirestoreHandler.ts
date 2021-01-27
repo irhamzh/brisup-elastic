@@ -202,7 +202,8 @@ export default class FirestoreCollectionHandler {
         `Error in \`FS_ADDED\` handler [doc@${doc.id}]: ${e.message}`
       );
       console.error(e);
-      console.error("--------->", e?.meta?.body);
+      console.error("--------->", this?.reference?.collection);
+      console.error(e?.meta?.body);
     }
   };
 
@@ -240,6 +241,8 @@ export default class FirestoreCollectionHandler {
         `Error in \`FS_MODIFIED\` handler [doc@${doc.id}]: ${e.message}`
       );
       console.error(e);
+      console.error("--------->", this?.reference?.collection);
+      console.error(e?.meta?.body);
     }
   };
 
@@ -257,6 +260,8 @@ export default class FirestoreCollectionHandler {
         `Error in \`FS_REMOVE\` handler [doc@${doc.id}]: ${e.message}`
       );
       console.error(e);
+      console.error("--------->", this?.reference?.collection);
+      console.error(e?.meta?.body);
     }
   };
 

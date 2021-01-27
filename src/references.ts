@@ -452,6 +452,7 @@ const references: Array<Reference> = [
   ...MasterData,
   ...SharedCollection,
   ...FixedAsset,
+  ...GeneralAffair,
   ...Procurement,
   ...FinancialAdmin,
 ];
