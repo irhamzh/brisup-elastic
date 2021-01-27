@@ -1,18 +1,18 @@
 {
-  "took": 0,
-  "timed_out": false,
-  "_shards": {
-    "total": 1,
-    "successful": 1,
-    "skipped": 0,
-    "failed": 0
-  },
-  "hits": {
-    "total": {
-      "value": 0,
-      "relation": "eq"
-    },
-    "max_score": null,
-    "hits": []
+  "_index": "bri_corpu_users",
+  "_type": "_doc",
+  "_id": "GCAtXZrB8OPtjkulp8VYfAjJE0m1",
+  "_version": 1,
+  "_seq_no": 11,
+  "_primary_term": 1,
+  "found": true,
+  "_source": {
+    "createdAt": "2021-01-27T06:40:02.388Z",
+    "name": "Amer",
+    "profilePicture": "https://firebasestorage.googleapis.com/v0/b/geochat-252415.appspot.com/o/no-user-pic.png?alt=media",
+    "updatedAt": "2021-01-27T06:40:02.388Z",
+    "division": "All",
+    "role": "rqS5Tm2uRMj5GUgsIGdH",
+    "email": "budi@gmail.com"
   }
 }

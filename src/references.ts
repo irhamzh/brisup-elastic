@@ -142,11 +142,11 @@ const MasterData: Array<Reference> = [
 ];
 
 const FinancialAdmin: Array<Reference> = [
-  // {
-  //   collection: "fa_payments",
-  //   index: "bri_corpu_fa_payments",
-  //   transform: (data, parent) => firestoreTimeStampToDate(data),
-  // },
+  {
+    collection: "fa_payments",
+    index: "bri_corpu_fa_payments",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
   {
     collection: "fa_uploads",
     index: "bri_corpu_fa_uploads",

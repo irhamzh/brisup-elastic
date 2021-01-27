@@ -1,4 +1,5 @@
-GET /bri_corpu_partners/_search
+GET /bri_corpu_users/_doc/GCAtXZrB8OPtjkulp8VYfAjJE0m1
+
 {
   "from": 0,
   "size": 10,
@@ -7,8 +8,7 @@ GET /bri_corpu_partners/_search
       "must": [
         {
           "wildcard": {
-            "name.keyword": 
-              "*pt.*"
+            "email":"*budi*"
           }
         }
         // {
