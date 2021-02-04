@@ -4,6 +4,11 @@ import firestoreTimeStampToDate from "./util/firestoreTimeStampToDate";
 // Records should be added here to be indexed / made searchable
 const MasterData: Array<Reference> = [
   {
+    collection: "taxes",
+    index: "bri_corpu_taxes",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
+  {
     collection: "areas",
     index: "bri_corpu_areas",
     transform: (data, parent) => firestoreTimeStampToDate(data),
@@ -332,6 +337,21 @@ const Procurement: Array<Reference> = [
   {
     collection: "pr_pengadaan_tanda_terima_barangs",
     index: "bri_corpu_pr_pengadaan_tanda_terima_barangs",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
+  {
+    collection: "pr_atks",
+    index: "bri_corpu_pr_atks",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
+  {
+    collection: "pr_caterings",
+    index: "bri_corpu_pr_caterings",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
+  {
+    collection: "pr_hotels",
+    index: "bri_corpu_pr_hotels",
     transform: (data, parent) => firestoreTimeStampToDate(data),
   },
 ];

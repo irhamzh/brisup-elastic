@@ -1,28 +1,27 @@
-GET /bri_corpu_ga_pgspjs/_mapping
+DELETE /bri_corpu_ga_monitoring_cctvs/
 
 {
-  /"from": 0,
-  "size": 10,
-  "query": {
-    "bool": {
-      "must": [
-        {
-          "wildcard": {
-            "email":"*budi*"
-          }
-        }
-        // {
-        //   "wildcard": {
-        //     "name": "*Am*"
-        //   }
-        // },{
-        //   "wildcard": {
-        //     "email": "*sss*"
-        //   }
-        // }
-      ]
-    }
-  }
+  "from": 0,
+  "size": 20
+  // "query": {
+  //   "bool": {
+  //     "must": [
+  //      // {
+  //       //   "wildcard": {
+  //       //     "name": "*Am*"
+  //       //   }
+  //       // {
+  //       //   "wildcard": {
+  //       //     "name": "*Am*"
+  //       //   }
+  //       // },{
+  //       //   "wildcard": {
+  //       //     "email": "*sss*"
+  //       //   }
+  //       // }
+  //     ]
+  //   }
+  // }
 }
 
 
