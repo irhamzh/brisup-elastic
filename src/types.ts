@@ -1,5 +1,9 @@
 import * as admin from "firebase-admin";
 import { CollectionReference } from "@google-cloud/firestore";
+import {
+  MappingProperty,
+  PropertyName,
+} from "@elastic/elasticsearch/api/types";
 
 export type ElasticSearchFieldType =
   | "text"
@@ -30,14 +34,7 @@ export interface Reference {
   index: DynamicTypeIndex | string;
   include?: Array<string>;
   exclude?: Array<string>;
-  mappings?: {
-    [key: string]: {
-      type: ElasticSearchFieldType;
-      format?: string;
-      dynamic?: boolean;
-      fields?: any;
-    };
-  };
+  mappings?: Record<PropertyName, MappingProperty>;
   builder?: (ref: CollectionReference) => admin.firestore.Query;
   subBuilder?: (ref: CollectionReference) => admin.firestore.Query;
   filter?: (data: admin.firestore.DocumentData) => boolean | null;
