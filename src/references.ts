@@ -215,6 +215,63 @@ const FixedAsset: Array<Reference> = [
     collection: "fx_pengadaans",
     index: "bri_corpu_fx_pengadaans",
     transform: (data, parent) => firestoreTimeStampToDate(data),
+    // mappings: {
+    //   provider: {
+    //     properties: {
+    //       address: {
+    //         type: "text",
+    //         fields: {
+    //           keyword: {
+    //             type: "keyword",
+    //             ignore_above: 256,
+    //           },
+    //         },
+    //       },
+    //       contact: {
+    //         type: "text",
+    //         fields: {
+    //           keyword: {
+    //             type: "keyword",
+    //             ignore_above: 256,
+    //           },
+    //         },
+    //       },
+    //       createdAt: {
+    //         type: "date",
+    //       },
+    //       id: {
+    //         type: "text",
+    //         fields: {
+    //           keyword: {
+    //             type: "keyword",
+    //             ignore_above: 256,
+    //           },
+    //         },
+    //       },
+    //       name: {
+    //         type: "text",
+    //         fields: {
+    //           keyword: {
+    //             type: "keyword",
+    //             ignore_above: 256,
+    //           },
+    //         },
+    //       },
+    //       pic: {
+    //         type: "text",
+    //         fields: {
+    //           keyword: {
+    //             type: "keyword",
+    //             ignore_above: 256,
+    //           },
+    //         },
+    //       },
+    //       updatedAt: {
+    //         type: "date",
+    //       },
+    //     },
+    //   },
+    // },
   },
   {
     collection: "pg_working_tools",
@@ -225,6 +282,41 @@ const FixedAsset: Array<Reference> = [
     collection: "pg_peralatan_its",
     index: "bri_corpu_pg_peralatan_its",
     transform: (data, parent) => firestoreTimeStampToDate(data),
+    // mappings: {
+    //   createdAt: {
+    //     type: "date",
+    //   },
+    //   id: {
+    //     type: "text",
+    //     fields: {
+    //       keyword: {
+    //         type: "keyword",
+    //         ignore_above: 256,
+    //       },
+    //     },
+    //   },
+    //   name: {
+    //     type: "text",
+    //     fields: {
+    //       keyword: {
+    //         type: "keyword",
+    //         ignore_above: 256,
+    //       },
+    //     },
+    //   },
+    //   typeItem: {
+    //     type: "text",
+    //     fields: {
+    //       keyword: {
+    //         type: "keyword",
+    //         ignore_above: 256,
+    //       },
+    //     },
+    //   },
+    //   updatedAt: {
+    //     type: "date",
+    //   },
+    // },
   },
   {
     collection: "pg_building_sanitations/yard/pg_yard",
