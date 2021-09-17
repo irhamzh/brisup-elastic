@@ -5,6 +5,9 @@ export default function firestoreTimeStampToDate(obj: any) {
     if (obj[prop] instanceof admin.firestore.Timestamp) {
       obj[prop] = obj[prop].toDate();
     }
+    if (obj[prop] === "") {
+      obj[prop] = null;
+    }
     if (typeof obj[prop] == "object") {
       firestoreTimeStampToDate(obj[prop]);
     }
