@@ -18,6 +18,7 @@ class Config {
   public ES_USER: string = process.env.ES_USER || null;
   public ES_PASS: string = process.env.ES_PASS || null;
   public ES_PROTOCOL: string = process.env.ES_PROTOCOL || "http";
+  public ES_URL: string = process.env.ES_URL || "www";
   public QUEUE_CONCURRENT: number = process.env.QUEUE_CONCURRENT
     ? parseInt(process.env.QUEUE_CONCURRENT)
     : 5;

@@ -18,7 +18,8 @@ export default class Elasticstore {
   initElasticsearch = async () => {
     return new Promise((resolve, reject) => {
       this.esClient = new elasticsearch.Client({
-        node: `${Config.ES_PROTOCOL}://${Config.ES_HOST}:${Config.ES_PORT}`,
+        // node: `${Config.ES_PROTOCOL}://${Config.ES_HOST}:${Config.ES_PORT}`,
+        node: `${Config.ES_URL}`,
         auth: {
           username: Config.ES_USER,
           password: Config.ES_PASS,
