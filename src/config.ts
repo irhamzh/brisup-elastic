@@ -13,11 +13,11 @@ class Config {
   public FB_RES: string = process.env.FB_RES;
   public FB_SERVICE_PATH: string = process.env.FB_SERVICE_PATH;
   public FB_SERVICE_ACCOUNT: string = process.env.FB_SERVICE_ACCOUNT;
-  public ES_HOST: string = process.env.ES_HOST || "localhost";
-  public ES_PORT: string = process.env.ES_PORT || "9200";
+  public ES_HOST: string = process.env.ES_HOST || "my-deployment-d6020b.es.us-central1.gcp.cloud.es.io";
+  public ES_PORT: string = process.env.ES_PORT || "9243";
   public ES_USER: string = process.env.ES_USER || null;
   public ES_PASS: string = process.env.ES_PASS || null;
-  public ES_PROTOCOL: string = process.env.ES_PROTOCOL || "http";
+  public ES_PROTOCOL: string = process.env.ES_PROTOCOL || "https://my-deployment-d6020b.es.us-central1.gcp.cloud.es.io:9243/";
   public ES_URL: string = process.env.ES_URL || "www";
   public QUEUE_CONCURRENT: number = process.env.QUEUE_CONCURRENT
     ? parseInt(process.env.QUEUE_CONCURRENT)
