@@ -11,6 +11,6 @@ COPY . .
 
 RUN npm run build
 
-ENV PORT 9243
+ENV PORT 443
 
 CMD npm start
