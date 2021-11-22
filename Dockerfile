@@ -9,6 +9,6 @@ RUN yarn
 
 COPY . .
 
-RUN yarn run build
+RUN npm run build
 
-CMD yarn start
+CMD npm start
