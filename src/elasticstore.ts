@@ -3,6 +3,7 @@ import * as elasticsearch from "@elastic/elasticsearch";
 import * as colors from "colors";
 import * as admin from "firebase-admin";
 import Worker from "./util/Worker";
+import { config } from "dotenv";
 
 export default class Elasticstore {
   private esClient: elasticsearch.Client;
@@ -77,6 +78,7 @@ export default class Elasticstore {
         databaseURL: Config.FB_URL,
       });
     } catch (e) {
+      console.log("firebase %s and the debug" , Config.FB_ES_COLLECTION);
       console.log(colors.red(e.message));
     }
   };
