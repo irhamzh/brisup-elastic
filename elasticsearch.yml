@@ -1,0 +1,4 @@
+http.cors.allow-origin: "*"
+http.cors.allow-credentials: true
+http.cors.allow-headers: "X-Requested-With, Content-Type, Content-Length, Authorization"
+http.cors.enabled: true
