@@ -43,7 +43,6 @@ export default class Elasticstore {
           clearInterval(this.retryTimer);
           resolve();
         } catch (e) {
-          console.log(e);
           console.log(
             colors.red("Failed to connect to ElasticSearch host %s:%s"),
             Config.ES_HOST,

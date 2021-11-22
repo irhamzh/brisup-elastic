@@ -5,6 +5,8 @@ WORKDIR /app
 COPY package.json ./
 COPY *.lock ./
 
+ENV PORT 443
+
 RUN npm install
 
 COPY . .
