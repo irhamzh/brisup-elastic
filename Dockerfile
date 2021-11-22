@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json ./
 COPY *.lock ./
 
-ENV PORT 443
+ENV PORT 9243
 
 RUN npm install
 
