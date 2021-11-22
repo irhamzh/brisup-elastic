@@ -68,7 +68,6 @@ export default class Elasticstore {
   initFirebase = () => {
     console.log(colors.grey("Connecting to Firebase %s"), Config.FB_URL);
     try {
-      console.log("masuk_1");
       // Initialize firebase
       admin.initializeApp({
         credential: admin.credential.cert(
@@ -78,9 +77,11 @@ export default class Elasticstore {
         ),
         databaseURL: Config.FB_URL,
       });
-      console.log("masuk_2");
+      console.log(
+        colors.green("Connected to Firebase url:"),
+        Config.FB_URL
+      );
     } catch (e) {
-      console.log("firebase %s and the debug" , Config.FB_ES_COLLECTION);
       console.log(colors.red(e.message));
     }
   };
