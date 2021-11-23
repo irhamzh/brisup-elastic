@@ -5,6 +5,9 @@ WORKDIR /app
 COPY package.json ./
 COPY *.lock ./
 
+ENV PORT 9243
+ENV PROTOCOL https
+
 RUN yarn
 
 COPY . .
