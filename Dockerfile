@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:14
 
 WORKDIR /app
 
@@ -11,4 +11,4 @@ COPY . .
 
 RUN npm run build
 
-# CMD npm start
+CMD npm start
