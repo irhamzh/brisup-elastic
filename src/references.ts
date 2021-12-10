@@ -174,6 +174,11 @@ const SharedCollection: Array<Reference> = [
     index: "bri_corpu_working_orders",
     transform: (data, parent) => firestoreTimeStampToDate(data),
   },
+  {
+    collection: "daily_activities",
+    index: "bri_corpu_daily_activities",
+    transform: (data, parent) => firestoreTimeStampToDate(data),
+  },
 ];
 const FixedAsset: Array<Reference> = [
   {
